@@ -1,0 +1,77 @@
+---
+
+import BentoItem from './BentoItem.astro'
+---
+<section
+    class={`
+        w-full max-w-[1400px]
+        grid lg:grid-cols-10 auto-rows-[30rem] gap-4
+        mx-auto p-6 md:p-12 lg:p-20
+    `}>
+   <BentoItem 
+        class='col-span-10 md:col-span-6' 
+        title='Reglas' 
+        subtitle='Conoce las reglas del juego'>
+
+        <div
+            slot="image"
+            class="
+                transition-scale absolute bottom-0 left-0 top-0
+                -z-10 h-full w-full 
+                bg-cover bg-center bg-no-repeat opacity-50 bg-blend-luminosity duration-1000 
+                ease-in-out group-hover:scale-95
+            "
+            style="background-image: url('/Cartas.jpg');"
+        />
+            
+   </BentoItem>
+   <BentoItem 
+        class='col-span-10 md:col-span-4' 
+        title='Campeonatos' 
+        subtitle='Todos los campeonatos del formato'>
+        <div
+            slot="image"
+            class="
+                transition-scale absolute left-0 top-0 bottom-0 
+                -z-10 h-full  w-full 
+                bg-cover bg-center bg-no-repeat opacity-50 bg-blend-luminosity duration-1000
+                group-hover:scale-95  
+                ease-in-out  bg-blue-850
+            "
+            style="background-image: url('/Tournament.jpg');"
+        />
+   </BentoItem>
+   <BentoItem 
+   class='col-span-10 md:col-span-4' 
+   title='Mazos' 
+   subtitle='Crea tu propio mazo'>
+   <div
+   slot="image"
+   class="
+   transition-scale absolute left-0 top-0 bottom-0 
+   -z-10 h-full  w-full 
+   bg-cover bg-center bg-no-repeat opacity-50 bg-blend-luminosity duration-1000
+   group-hover:scale-95  
+   ease-in-out  bg-blue-850
+   "
+   style="background-image: url('/deck.jpeg'); "
+   />
+   </BentoItem>
+   <BentoItem 
+   class='col-span-10 md:col-span-6' 
+   title='Nuevas Expansiones' 
+   subtitle='Conoce las cartas de las últimas ediciones'>
+   <div
+       slot="image"
+       class="
+           transition-scale absolute left-0 top-0 bottom-0 
+           -z-10 h-full  w-full 
+           bg-cover bg-center bg-no-repeat opacity-50 bg-blend-luminosity duration-1000
+           group-hover:scale-95  
+           ease-in-out  bg-blue-850
+       "
+       style="background-image: url('/Ixalan.jpg');"
+   />
+</BentoItem>
+</section>
+
