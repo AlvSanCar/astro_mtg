@@ -3,8 +3,9 @@ interface Props{
     class?: string
     title: string
     subtitle?: string 
+    page?:string
 }
-const {title, subtitle} = Astro.props
+const {title, subtitle,page} = Astro.props
 ---
 <article class={`
     ${Astro.props.class}
@@ -16,12 +17,15 @@ const {title, subtitle} = Astro.props
     overflow-hidden
     group
 `}>
+    <a href={page}>
     <div 
         class="absolute z-10 bottom-0 top-0 w-full h-full 
         bg-gradient-to-b from-transparent from-30% via-black/20 to-black/80">
 
     </div>
-    <slot name="image"></slot>
+    
+    <slot name="image" >
+    </slot>
     <div class="relative z-20 flex h-full select-none flex-col justify-end gap-1 p-2 text-lg md:p-6">
         <h2 class="mb-4 text-balance text-3xl font-semibold uppercase text-white">{title}</h2>
         {
@@ -29,5 +33,5 @@ const {title, subtitle} = Astro.props
             <h3 class="-mt-4 mb-4 text-3xl font-semibold text-sky-200/80">{subtitle}</h3>
         }
     </div>
-
+    </a>
 </article>

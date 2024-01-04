@@ -1,0 +1,68 @@
+---
+import Logo from "./Logo.astro"
+---
+<!-- meter blackdrop-blur-sm -->
+
+<header 
+    id="header-nav" 
+    class="fixed w-screen h-20 py-4 z-10 backdrop-blur-sm top-0 px-8 lg:px-0">
+    
+    <div class="grid grid-cols-3 max-w-7xl mx-auto items-center justify-between">
+        
+        <div class="col-span-1">
+            <a href="/">
+                <Logo class="px-0 py-0 h-auto w-10" />
+            </a>
+        </div>
+  
+      <!-- Menú de navegación para pantallas grandes -->
+         <nav
+            class="hidden md:flex flex-grow basis-0 w-full gap-x-6 text-lg md:justify-center font-medium"
+        >
+            <a class="hover:underline" href="/info">Información</a>
+            <a class="hover:underline" href="/archivo">Archivo</a>
+        </nav>
+      
+            <!-- Botón de menú para pantallas pequeñas -->
+          <!--  <button
+            id="menu-toggle"
+            class="flex flex-grow basis-0 justify-end text-2xl md:hidden z-50"
+        >
+            <span id="menu-icon">☰</span>
+        </button>
+    
+        <div
+            class="hidden md:flex-grow md:basis-0 justify-end whitespace-nowrap md:flex md:text-base"
+        >
+        </div>
+        </div>
+         -->
+        <!-- Menú de navegación móvil para pantallas pequeñas -->
+        <!--<nav
+        id="mobile-menu"
+        class="bg-black/80 backdrop-blur-3xl hidden w-full flex-col items-center text-center text-2xl fixed top-0 left-0 right-0 h-dvh place-content-center"
+        >
+        </nav>
+         -->
+    </div>
+  </header>
+
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuToggle = document.getElementById("menu-toggle")
+      const mobileMenu = document.getElementById("mobile-menu")
+      const menuIcon = document.getElementById("menu-icon")
+  
+      if (!menuToggle || !mobileMenu || !menuIcon) {
+        return
+      }
+  
+      menuToggle.addEventListener("click", function () {
+        mobileMenu.classList.toggle("hidden")
+        mobileMenu.classList.toggle("flex")
+        menuIcon.textContent = menuIcon.textContent === "☰" ? "✕" : "☰"
+      })
+    })
+  </script>
+
