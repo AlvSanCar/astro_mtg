@@ -21,7 +21,7 @@ import BentoItem from './BentoItem.astro'
                 transition-scale absolute bottom-0 left-0 top-0
                 -z-10 h-full w-full 
                 bg-cover bg-center bg-no-repeat opacity-50 bg-blend-luminosity duration-1000 
-                ease-in-out group-hover:scale-95
+                ease-in-out group-hover:scale-95 rounded-xl
             "
             style="background-image: url('/Cartas.jpg');"
         >
@@ -43,7 +43,7 @@ import BentoItem from './BentoItem.astro'
                 -z-10 h-full  w-full 
                 bg-cover bg-center bg-no-repeat opacity-50 bg-blend-luminosity duration-1000
                 group-hover:scale-95  
-                ease-in-out  bg-blue-850
+                ease-in-out  bg-blue-850 rounded-xl
             "
             style="background-image: url('/Tournament.jpg');"
         >
@@ -51,10 +51,10 @@ import BentoItem from './BentoItem.astro'
         </div>
    </BentoItem>
    <BentoItem 
-        class='col-span-10 md:col-span-4' 
+        class='col-span-10 md:col-span-4 rounded-sm' 
         title='Mazos' 
         subtitle='Crea tu propio mazo'
-        page="/decks">
+        page="/Decks">
             <div
             slot="image"
             class="
@@ -62,7 +62,7 @@ import BentoItem from './BentoItem.astro'
             -z-10 h-full  w-full 
             bg-cover bg-center bg-no-repeat opacity-50 bg-blend-luminosity duration-1000
             group-hover:scale-95  
-            ease-in-out  bg-blue-850
+            ease-in-out  bg-blue-850 rounded-xl
             "
             style="background-image: url('/deck.jpeg'); "
             />
@@ -71,7 +71,7 @@ import BentoItem from './BentoItem.astro'
         class='col-span-10 md:col-span-6' 
         title='Nuevas Expansiones' 
         subtitle='Conoce las cartas de las últimas ediciones'
-        page="/news">
+        page="/News">
         <div
             slot="image"
             class="
@@ -79,10 +79,11 @@ import BentoItem from './BentoItem.astro'
                 -z-10 h-full  w-full 
                 bg-cover bg-center bg-no-repeat opacity-50 bg-blend-luminosity duration-1000
                 group-hover:scale-95  
-                ease-in-out  bg-blue-850
+                ease-in-out  bg-blue-850 rounded-xl
             "
             style="background-image: url('/Ixalan.jpg');"
         />
+        
     </BentoItem>
 </section>
 
